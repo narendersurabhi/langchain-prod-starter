@@ -11,3 +11,4 @@ This file tracks changes made by automated agents in this repository.
 - Added test suite for health, chat, rag, agent, and ingestion.
 - Added project tooling (pyproject, Makefile, pre-commit), CI workflow, Dockerfile, docker-compose.
 - Added repository docs and governance files (README, CONTRIBUTING, SECURITY, CODEOWNERS, issue/PR templates).
+- Updated build configuration to explicitly include the src package for editable installs.
