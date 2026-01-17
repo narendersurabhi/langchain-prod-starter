@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from lc_app.core.config import AppSettings
-from lc_app.core.errors import ProviderNotConfiguredError
 from langchain_core.language_models.chat_models import BaseChatModel
 
+from lc_app.core.config import AppSettings
+from lc_app.core.errors import ProviderNotConfiguredError
 from lc_app.llms.fake import FakeChatModel
 
 

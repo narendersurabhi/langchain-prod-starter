@@ -65,6 +65,7 @@ exclude = ["tests"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 addopts = "-q --cov=src/lc_app --cov-report=term-missing"
+pythonpath = ["src"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lc_app"]

@@ -14,9 +14,9 @@ from lc_app.api.schemas import (
     RagResponse,
     ReadyResponse,
 )
+from lc_app.chains.rag import build_rag_chain
 from lc_app.core.errors import ProviderNotConfiguredError, VectorStoreNotReadyError
 from lc_app.core.utils import timer
-from lc_app.chains.rag import build_rag_chain
 from lc_app.observability.tracing import get_tracer
 from lc_app.rag.retriever import get_retriever
 from lc_app.rag.store import VectorStoreManager

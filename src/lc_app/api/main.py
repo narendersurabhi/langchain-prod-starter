@@ -4,6 +4,8 @@ from fastapi import FastAPI
 
 from lc_app.api.middleware import RequestContextMiddleware
 from lc_app.api.routes import router
+from lc_app.chains.agent import build_agent
+from lc_app.chains.chat import build_chat_chain
 from lc_app.core.config import AppSettings
 from lc_app.llms.factory import get_chat_model
 from lc_app.llms.fake import DeterministicEmbeddings, FakeChatModel
@@ -12,9 +14,6 @@ from lc_app.observability.tracing import instrument_app, setup_tracing
 from lc_app.rag.ingest import ensure_vector_store
 from lc_app.rag.retriever import get_retriever
 from lc_app.rag.store import VectorStoreManager
-from lc_app.chains.chat import build_chat_chain
-from lc_app.chains.rag import build_rag_chain
-from lc_app.chains.agent import build_agent
 
 
 def create_app() -> FastAPI:

@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from typing import Any, Iterable, List
+from collections.abc import Iterable
+from typing import Any
 
 import numpy as np
+from langchain_core.embeddings import Embeddings
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 from langchain_core.outputs import ChatGeneration, ChatResult
-from langchain_core.embeddings import Embeddings
 
 
 class FakeChatModel(BaseChatModel):
@@ -14,7 +15,7 @@ class FakeChatModel(BaseChatModel):
 
     def _generate(
         self,
-        messages: List[BaseMessage],
+        messages: list[BaseMessage],
         stop: list[str] | None = None,
         run_manager: Any | None = None,
         **kwargs: Any,
